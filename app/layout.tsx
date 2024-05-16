@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <section className="py-6">
           <div className="container px-4 mx-auto">{children}</div>
         </section>
+        <SpeedInsights />
       </body>
     </html>
   );
